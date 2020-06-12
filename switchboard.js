@@ -105,9 +105,17 @@ class SwitchBoard {
       switchboard.theSetup.innerHTML = ""
       this.getTheStakes()
       this.compressedLookOff()
-    })
+    }, { once: true});
 
   }
  
+  // submitStakes() {
+  //   switchboard.submitStakes.addEventListener('click', () => {
+  //   talker.speak("Thank you for submitting.");
+  //   talker.wait(3000)
+  //   switchboard.setStakes.innerHTML = ""
+  //   let theStory = new Story(switchboard.stakes1, switchboard.stakes2, switchboard.stakes3, switchboard.stakes4, switchboard.stakes5)
+  //   }, { once: true})
+  // }
 
 }
