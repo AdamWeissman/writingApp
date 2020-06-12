@@ -1,90 +1,100 @@
 table, th, td {
   border: 5px solid black;
-  font-size: 55px;
+  font-size: 34px;
 }
 
 @keyframes shadow-pulse
   {
-    50% {
-      box-shadow: 0 0px 20px 0px rgba(255, 255, 255, 0.5), inset 0px 0px 20px 0px rgba(247, 139, 171, 0.5);
+    75% {
+      box-shadow: 0 0px 20px 0px rgba(1, 60, 255, 0.5), inset 0px 0px 20px 0px rgba(247, 0, 255, 0.5);
     }
   }
 
 @keyframes shadow-pulse2
 {
-  50% {
-    box-shadow: 0 0px 20px 0px rgba(245, 120, 120, 0.5), inset 0px 0px 20px 0px rgba(255, 184, 255, 0.5);
+  75% {
+    box-shadow: 0 0px 20px 0px rgba(212, 40, 255, 0.5), inset 0px 0px 20px 0px rrgba(184, 247, 255, 0.5)
   }
 }
 
 @keyframes shadow-pulse3
 {
-  50% {
-    box-shadow: 0 0px 20px 0px rgba(216, 116, 255, 0.5), inset 0px 0px 20px 0px rgba(163, 232, 233, 0.5);
+  75% {
+    box-shadow: 0 0px 20px 0px rgba(196, 150, 215, 0.5), inset 0px 0px 20px 0px rgba(35, 140, 232, 0.5);
   }
 }
 
 @keyframes shadow-pulse4
 {
-  50% {
-    box-shadow: 0 0px 20px 0px rgba(255, 231, 231, 0.5), inset 0px 0px 20px 0px rgba(233, 142, 169, 0.5);
+  75% {
+    box-shadow: 0 0px 20px 0px rgba(255, 204, 35, 0.5), inset 0px 0px 20px 0px rgba(255, 40, 105, 0.5);
   }
 }
 
 @keyframes shadow-pulse5
 {
-  50% {
-    box-shadow: 0 0px 20px 0px rgba(255, 244, 142, 0.5), inset 0px 0px 20px 0px rgba(240, 208, 208, 0.5);
+  75% {
+    box-shadow: 0 0px 20px 0px rgba(255, 252, 222, 0.5), inset 0px 0px 20px 0px rgba(211, 5, 119, 0.5);
   }
 }
 
 
 
 #act1 {
- text-align: center;
- color: #F9F5F1;
- -webkit-animation: shadow-pulse 7s ease-in-out infinite alternate;
- -moz-animation: shadow-pulse 7s ease-in-out infinite alternate;
- animation: shadow-pulse 7s ease-in-out infinite alternate;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(254, 149, 249), rgb(25, 99, 225));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse1 12s infinite;
 }
 
 #act2 {
   text-align: center;
-  color: #F9F5F1;
-  -webkit-animation: shadow-pulse2 12s ease-in-out infinite alternate;
-  -moz-animation: shadow-pulse2 12s ease-in-out infinite alternate;
-  animation: shadow-pulse2 12s ease-in-out infinite alternate;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(90, 65, 235), rgb(212, 0, 255));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse2 12s infinite;
 }
 
 #act3 {
   text-align: center;
-  color: #F9F5F1;
-  -webkit-animation: shadow-pulse3 5s ease-in-out infinite alternate;
-  -moz-animation: shadow-pulse3 5s ease-in-out infinite alternate;
-  animation: shadow-pulse3 5s ease-in-out infinite alternate;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(247, 7, 207), rgb(119, 217, 255));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse3 12s infinite;
 }
 
 #act4 {
   text-align: center;
-  color: #F9F5F1;
-  -webkit-animation: shadow-pulse4 9s ease-in-out infinite alternate;
-  -moz-animation: shadow-pulse4 9s ease-in-out infinite alternate;
-  animation: shadow-pulse4 9s ease-in-out infinite alternate;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(76, 61, 244), rgb(2, 174, 254));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse4 12s infinite;
 }
 
 #act5 {
   text-align: center;
-  color: #F9F5F1;
-  -webkit-animation: shadow-pulse5 12s ease-in-out infinite alternate;
-  -moz-animation: shadow-pulse5 12s ease-in-out infinite alternate;
-  animation: shadow-pulse5 12s ease-in-out infinite alternate;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(255, 51, 204), rgb(249, 181, 255));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse5 12s infinite;
 }
 
 
 #unityAlabel {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #BEAD88);
+  background-image: linear-gradient(to bottom right, rgb(221, 0, 255), rgb(44, 62, 255));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
@@ -94,7 +104,7 @@ table, th, td {
 #unityA1o5a_col1 {
   text-align: center;
   background-color: #E4D8C3;
-  background-image: linear-gradient(to bottom right, rgb(235, 225, 208), rgb(204, 186, 146));
+  background-image: linear-gradient(to bottom right, rgb(210, 208, 235), rgb(204, 186, 146));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
@@ -145,7 +155,7 @@ table, th, td {
 #unityBlabel {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #BEAD88);
+  background-image: linear-gradient(to bottom right, rgb(45, 164, 244), rgb(176, 136, 190));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
@@ -206,7 +216,7 @@ table, th, td {
 #unityClabel {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #BEAD88);
+  background-image: linear-gradient(to bottom right, rgb(255, 144, 249), rgb(129, 232, 255));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
@@ -267,7 +277,7 @@ table, th, td {
 #unityDlabel {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #BEAD88);
+  background-image: linear-gradient(to bottom right, rgb(10, 47, 255), rgb(203, 124, 255));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
@@ -328,7 +338,7 @@ table, th, td {
 #unityElabel {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #BEAD88);
+  background-image: linear-gradient(to bottom right, rgb(130, 111, 255), rgb(187, 136, 190));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
@@ -383,4 +393,12 @@ table, th, td {
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
   animation: shadow-pulse2 10s infinite;
+}
+
+#theSlice {
+  
+}
+
+#theSetup {
+
 }
