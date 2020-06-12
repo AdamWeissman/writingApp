@@ -1,0 +1,386 @@
+table, th, td {
+  border: 5px solid black;
+  font-size: 55px;
+}
+
+@keyframes shadow-pulse
+  {
+    50% {
+      box-shadow: 0 0px 20px 0px rgba(255, 255, 255, 0.5), inset 0px 0px 20px 0px rgba(247, 139, 171, 0.5);
+    }
+  }
+
+@keyframes shadow-pulse2
+{
+  50% {
+    box-shadow: 0 0px 20px 0px rgba(245, 120, 120, 0.5), inset 0px 0px 20px 0px rgba(255, 184, 255, 0.5);
+  }
+}
+
+@keyframes shadow-pulse3
+{
+  50% {
+    box-shadow: 0 0px 20px 0px rgba(216, 116, 255, 0.5), inset 0px 0px 20px 0px rgba(163, 232, 233, 0.5);
+  }
+}
+
+@keyframes shadow-pulse4
+{
+  50% {
+    box-shadow: 0 0px 20px 0px rgba(255, 231, 231, 0.5), inset 0px 0px 20px 0px rgba(233, 142, 169, 0.5);
+  }
+}
+
+@keyframes shadow-pulse5
+{
+  50% {
+    box-shadow: 0 0px 20px 0px rgba(255, 244, 142, 0.5), inset 0px 0px 20px 0px rgba(240, 208, 208, 0.5);
+  }
+}
+
+
+
+#act1 {
+ text-align: center;
+ color: #F9F5F1;
+ -webkit-animation: shadow-pulse 7s ease-in-out infinite alternate;
+ -moz-animation: shadow-pulse 7s ease-in-out infinite alternate;
+ animation: shadow-pulse 7s ease-in-out infinite alternate;
+}
+
+#act2 {
+  text-align: center;
+  color: #F9F5F1;
+  -webkit-animation: shadow-pulse2 12s ease-in-out infinite alternate;
+  -moz-animation: shadow-pulse2 12s ease-in-out infinite alternate;
+  animation: shadow-pulse2 12s ease-in-out infinite alternate;
+}
+
+#act3 {
+  text-align: center;
+  color: #F9F5F1;
+  -webkit-animation: shadow-pulse3 5s ease-in-out infinite alternate;
+  -moz-animation: shadow-pulse3 5s ease-in-out infinite alternate;
+  animation: shadow-pulse3 5s ease-in-out infinite alternate;
+}
+
+#act4 {
+  text-align: center;
+  color: #F9F5F1;
+  -webkit-animation: shadow-pulse4 9s ease-in-out infinite alternate;
+  -moz-animation: shadow-pulse4 9s ease-in-out infinite alternate;
+  animation: shadow-pulse4 9s ease-in-out infinite alternate;
+}
+
+#act5 {
+  text-align: center;
+  color: #F9F5F1;
+  -webkit-animation: shadow-pulse5 12s ease-in-out infinite alternate;
+  -moz-animation: shadow-pulse5 12s ease-in-out infinite alternate;
+  animation: shadow-pulse5 12s ease-in-out infinite alternate;
+}
+
+
+#unityAlabel {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #BEAD88);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse2 4s infinite;
+}
+
+#unityA1o5a_col1 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(235, 225, 208), rgb(204, 186, 146));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse2 10s infinite;
+}
+
+#unityA2o5a_col2 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(225, 196, 147), rgb(231, 224, 209));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse2 10s infinite;
+}
+
+#unityA3o5a_col3 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(233, 214, 182), rgb(232, 206, 151));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse2 10s infinite;
+}
+
+#unityA4o5a_col4 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(221, 184, 128), rgb(247, 243, 234));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse2 10s infinite;
+}
+
+#unityA5o5a_col5e {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(253, 230, 189), rgb(248, 237, 212));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse2 10s infinite;
+}
+
+
+#unityBlabel {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #BEAD88);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse5 4s infinite;
+}
+
+#unityB1o3a_col1 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(250, 173, 39), rgb(255, 249, 235));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 136, 255, 0.995);
+  animation: shadow-pulse3 7s infinite;
+}
+
+#unityB2o3a_col2 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(250, 173, 39), rgb(255, 249, 235));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 136, 255, 0.995);
+  animation: shadow-pulse3 7s infinite;
+}
+
+#unityB3o3a_col3c {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(250, 173, 39), rgb(255, 249, 235));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 136, 255, 0.995);
+  animation: shadow-pulse3 7s infinite;
+}
+
+#unityB1o2b_col4 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(40, 218, 249), rgb(255, 255, 255));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(255, 68, 0, 0.687);
+  animation: shadow-pulse1 9s infinite;
+}
+
+#unityB2o2b_col5e {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(40, 218, 249), rgb(255, 255, 255));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(255, 68, 0, 0.687);
+  animation: shadow-pulse1 9s infinite;
+}
+
+
+#unityClabel {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #BEAD88);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse2 4s infinite;
+}
+
+#unityC1o2a_col1 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(177, 158, 127), rgb(243, 60, 60));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(68, 0, 255, 0.995);
+  animation: shadow-pulse5 8s infinite;
+}
+
+#unityC2o2a_col2b {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(177, 158, 127), rgb(243, 60, 60));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(68, 0, 255, 0.995);
+  animation: shadow-pulse5 8s infinite;
+}
+
+#unityC1o3b_col3 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right,rgb(128, 140, 186), rgb(250, 240, 217));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(191, 0, 255, 0.995);
+  animation: shadow-pulse1 12s infinite;
+}
+
+#unityC2o3b_col4 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right,rgb(128, 140, 186), rgb(250, 240, 217));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(191, 0, 255, 0.995);
+  animation: shadow-pulse1 12s infinite;
+}
+
+#unityC3o3b_col5e {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(128, 140, 186), rgb(250, 240, 217));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(191, 0, 255, 0.995);
+  animation: shadow-pulse1 12s infinite;
+}
+
+
+#unityDlabel {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #BEAD88);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse1 4s infinite;
+}
+
+#unityD1o1a_col1a {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(253, 229, 188), rgb(250, 207, 115));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(255, 0, 153, 0.995);
+  animation: shadow-pulse2 7s infinite;
+}
+
+#unityD1o2b_col2 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right,rgb(241, 237, 229), rgb(206, 242, 176));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(123, 255, 0, 0.995);
+  animation: shadow-pulse5 10s infinite;
+}
+
+#unityD2o2b_col3c {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(241, 237, 229), rgb(206, 242, 176));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(123, 255, 0, 0.995);
+  animation: shadow-pulse5 10s infinite;
+}
+
+#unityD1o1c_col4d {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(195, 219, 228), rgb(2, 255, 129));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 26, 255, 0.995);
+  animation: shadow-pulse3 8s infinite;
+}
+
+#unityD1o1d_col5e {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(220, 195, 228), rgb(243, 211, 141));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(234, 0, 255, 0.995);
+  animation: shadow-pulse1 6s infinite;
+}
+
+
+#unityElabel {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #BEAD88);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse3 4s infinite;
+}
+
+#unityE1o1a_col1a {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(250, 114, 189));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(255, 0, 119, 0.995);
+  animation: shadow-pulse1 6s infinite;
+}
+
+#unityE1o1b_col2b {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(255, 187, 70), rgb(247, 244, 238));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 157, 0.995);
+  animation: shadow-pulse1 10s infinite;
+}
+
+#unityE1o2c_col3 {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right,rgb(215, 213, 210), rgb(238, 95, 5));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(255, 149, 0, 0.995);
+  animation: shadow-pulse5 7s infinite;
+}
+
+#unityE2o2c_col4d {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(215, 213, 210), rgb(238, 95, 5));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(255, 149, 0, 0.995);
+  animation: shadow-pulse5 7s infinite;
+}
+
+#unityE1o1d_col5e {
+  text-align: center;
+  background-color: #E4D8C3;
+  background-image: linear-gradient(to bottom right, rgb(255, 235, 199), rgb(255, 190, 50));
+  -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
+  animation: shadow-pulse2 10s infinite;
+}
