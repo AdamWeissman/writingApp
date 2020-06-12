@@ -9,13 +9,13 @@ class Talker {
           console.error('speechSynthesis.speaking');
           return;
       }
-      if ([text] !== '') {
+      if (text !== '') {
         const voices = this.synth.getVoices();
-        utterThis = new SpeechSynthesisUtterance([text]) 
+        utterThis = new SpeechSynthesisUtterance(text) 
         try {
           utterThis.pitch = 1.0;
           utterThis.rate = .9;
-          utterThis.voice = voices[49]}
+          utterThis.voice = voices[18]}
         catch {
           utterThis.pitch = 1.7;
           utterThis.rate = .7;
@@ -45,4 +45,4 @@ class Talker {
 
 }
 
-const talker = new Talker()
+

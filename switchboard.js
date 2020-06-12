@@ -45,7 +45,69 @@ class SwitchBoard {
     this.rowEcolumn3 = document.getElementById('unityE1o2c_col3')
     this.rowEcolumn4 = document.getElementById('unityE2o2c_col4d')
     this.rowEcolumn5 = document.getElementById('unityE1o1d_col5e')
-  }
-}
 
-const switchboard = new SwitchBoard()
+
+    this.setStakes= document.getElementById('setStakes')
+    this.stakesSubmit = document.getElementById('stakesSubmit')
+    this.stakes1 = document.getElementById('stakes1')
+    this.stakes2 = document.getElementById('stakes2')
+    this.stakes3 = document.getElementById('stakes3')
+    this.stakes4 = document.getElementById('stakes4')
+    this.stakes5 = document.getElementById('stakes5')
+  }
+  
+  compressedLook () {
+    switchboard.theSlice.style.display = "none"
+    switchboard.act1.style.display = "none"
+    switchboard.act2.style.display = "none"
+    switchboard.act3.style.display = "none"
+    switchboard.act4.style.display = "none"
+    switchboard.act5.style.display = "none"
+
+    switchboard.rowAlabel.style.display = "none"
+    switchboard.rowBlabel.style.display = "none"
+    switchboard.rowClabel.style.display = "none"
+    switchboard.rowDlabel.style.display = "none"
+    switchboard.rowElabel.style.display = "none"
+    
+
+    switchboard.setStakes.style.display = "none"
+    switchboard.stakesSubmit.style.display = "none"
+
+  }
+
+  getTheStakes () {
+    switchboard.setStakes.style.display = ""
+    switchboard.stakesSubmit.style.display = ""
+  }
+
+
+  compressedLookOff () {
+    // switchboard.theSlice.style.display = "none"
+    //switchboard.theSlice.style.display = ""
+    switchboard.act1.style.display = ""
+    switchboard.act2.style.display = ""
+    switchboard.act3.style.display = ""
+    switchboard.act4.style.display = ""
+    switchboard.act5.style.display = ""
+
+    switchboard.rowAlabel.style.display = ""
+    switchboard.rowBlabel.style.display = ""
+    switchboard.rowClabel.style.display = ""
+    switchboard.rowDlabel.style.display = ""
+    switchboard.rowElabel.style.display = ""
+  }
+
+  turnItOn(){
+    switchboard.theSetup.addEventListener('click', () => {
+      talker.speak("Hello, please submit the escalating stakes of your story.");
+      talker.wait(3000)
+      switchboard.theSetup.innerHTML = ""
+      this.getTheStakes()
+      this.compressedLookOff()
+    })
+
+  }
+ 
+
+}

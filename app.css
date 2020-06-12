@@ -6,37 +6,44 @@ table, th, td {
 @keyframes shadow-pulse
   {
     75% {
-      box-shadow: 0 0px 20px 0px rgba(1, 60, 255, 0.5), inset 0px 0px 20px 0px rgba(247, 0, 255, 0.5);
+      box-shadow: 0 0px 20px 0px rgba(1, 60, 255, 0.5), inset 0px 10px 50px 20px rgba(247, 0, 255, 0.5);
     }
   }
 
 @keyframes shadow-pulse2
 {
   75% {
-    box-shadow: 0 0px 20px 0px rgba(212, 40, 255, 0.5), inset 0px 0px 20px 0px rrgba(184, 247, 255, 0.5)
+    box-shadow: 0 0px 20px 0px rgba(206, 12, 255, 0.5), inset 0px 10px 50px 20px rrgba(184, 247, 255, 0.5);
   }
 }
 
 @keyframes shadow-pulse3
 {
   75% {
-    box-shadow: 0 0px 20px 0px rgba(196, 150, 215, 0.5), inset 0px 0px 20px 0px rgba(35, 140, 232, 0.5);
+    box-shadow: 0 0px 20px 0px rgba(224, 152, 255, 0.5), inset 0px 10px 50px 20px rgba(0, 136, 255, 0.5);
   }
 }
 
 @keyframes shadow-pulse4
 {
   75% {
-    box-shadow: 0 0px 20px 0px rgba(255, 204, 35, 0.5), inset 0px 0px 20px 0px rgba(255, 40, 105, 0.5);
+    box-shadow: 0 0px 20px 0px rgba(255, 204, 35, 0.5), inset 0px 10px 50px 20px rgba(255, 40, 105, 0.5);
   }
 }
 
 @keyframes shadow-pulse5
 {
   75% {
-    box-shadow: 0 0px 20px 0px rgba(255, 252, 222, 0.5), inset 0px 0px 20px 0px rgba(211, 5, 119, 0.5);
+    box-shadow: 0 0px 20px 0px rgba(255, 252, 222, 0.5), inset 0px 10px 50px 20px rgba(211, 5, 119, 0.5);
   }
 }
+
+@keyframes shadow-pulse6
+  {
+    75% {
+      box-shadow: 0 10px 100px 30px rgba(255, 4, 221, 0.5), inset 0px 10px 50px 20px rgba(255, 247, 0, 0.5);
+    }
+  }
 
 
 
@@ -73,7 +80,7 @@ table, th, td {
 #act4 {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  background-image: linear-gradient(to bottom right, rgb(76, 61, 244), rgb(2, 174, 254));
+  background-image: linear-gradient(to bottom right, rgb(76, 244, 61), rgb(2, 174, 254));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
@@ -83,7 +90,7 @@ table, th, td {
 #act5 {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  background-image: linear-gradient(to bottom right, rgb(255, 51, 204), rgb(249, 181, 255));
+  background-image: linear-gradient(to bottom right, rgb(255, 51, 204), rgb(255, 225, 53));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
@@ -159,7 +166,7 @@ table, th, td {
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(0, 255, 255, 0.995);
-  animation: shadow-pulse5 4s infinite;
+  animation: shadow-pulse1 4s infinite;
 }
 
 #unityB1o3a_col1 {
@@ -246,31 +253,31 @@ table, th, td {
 #unityC1o3b_col3 {
   text-align: center;
   background-color: #E4D8C3;
-  background-image: linear-gradient(to bottom right,rgb(128, 140, 186), rgb(250, 240, 217));
+  background-image: linear-gradient(to bottom right,rgb(160, 179, 255), rgb(255, 228, 166));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(191, 0, 255, 0.995);
-  animation: shadow-pulse1 12s infinite;
+  animation: shadow-pulse2 9s infinite;
 }
 
 #unityC2o3b_col4 {
   text-align: center;
   background-color: #E4D8C3;
-  background-image: linear-gradient(to bottom right,rgb(128, 140, 186), rgb(250, 240, 217));
+  background-image: linear-gradient(to bottom right,rgb(160, 179, 255), rgb(255, 228, 166));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(191, 0, 255, 0.995);
-  animation: shadow-pulse1 12s infinite;
+  animation: shadow-pulse2 9s infinite;
 }
 
 #unityC3o3b_col5e {
   text-align: center;
   background-color: #E4D8C3;
-  background-image: linear-gradient(to bottom right, rgb(128, 140, 186), rgb(250, 240, 217));
+  background-image: linear-gradient(to bottom right, rgb(160, 179, 255), rgb(255, 228, 166));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(191, 0, 255, 0.995);
-  animation: shadow-pulse1 12s infinite;
+  animation: shadow-pulse2 9s infinite;
 }
 
 
@@ -327,11 +334,11 @@ table, th, td {
 #unityD1o1d_col5e {
   text-align: center;
   background-color: #E4D8C3;
-  background-image: linear-gradient(to bottom right, rgb(220, 195, 228), rgb(243, 211, 141));
+  background-image: linear-gradient(to bottom right, rgb(219, 110, 255), rgb(255, 174, 0));
   -moz-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3);
-  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(234, 0, 255, 0.995);
-  animation: shadow-pulse1 6s infinite;
+  box-shadow: 0px 5px 10px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 10px 0px rgba(76, 0, 255, 0.995);
+  animation: shadow-pulse5 6s infinite;
 }
 
 
@@ -399,6 +406,48 @@ table, th, td {
   
 }
 
+#setStakes {
+
+}
+
+#stakes1 {
+  
+}
+
+#stakes2 {
+  
+}
+
+#stakes3 {
+  
+}
+
+#stakes4 {
+  
+}
+
+#stakes5 {
+  
+}
+
+#stakesSubmit {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(255, 0, 242));
+  -moz-box-shadow: 0px 5px 20px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 20px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 20px 0px rgba(0, 58, 250, 0.995);
+  animation: shadow-pulse6 3s infinite;
+  
+}
+
 #theSetup {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(255, 0, 242));
+  -moz-box-shadow: 0px 5px 20px 0px rgba(26, 101, 158, 0.3);
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(26, 101, 158, 0.3);
+  box-shadow: 0px 5px 20px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 20px 0px rgba(0, 58, 250, 0.995);
+  animation: shadow-pulse6 3s infinite;
 
 }
