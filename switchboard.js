@@ -1,5 +1,6 @@
-class SwitchBoard {
-  constructor () {
+export class SwitchBoard {
+  constructor (speech) {
+    this.talker = speech 
     this.main = document.querySelector('main')
     this.theSetup = document.getElementById('theSetup')
     this.theSlice = document.getElementById('theSlice')
@@ -54,68 +55,69 @@ class SwitchBoard {
     this.stakes3 = document.getElementById('stakes3')
     this.stakes4 = document.getElementById('stakes4')
     this.stakes5 = document.getElementById('stakes5')
+
   }
   
   compressedLook () {
-    switchboard.theSlice.style.display = "none"
-    switchboard.act1.style.display = "none"
-    switchboard.act2.style.display = "none"
-    switchboard.act3.style.display = "none"
-    switchboard.act4.style.display = "none"
-    switchboard.act5.style.display = "none"
+    this.theSlice.style.display = "none"
+    this.act1.style.display = "none"
+    this.act2.style.display = "none"
+    this.act3.style.display = "none"
+    this.act4.style.display = "none"
+    this.act5.style.display = "none"
 
-    switchboard.rowAlabel.style.display = "none"
-    switchboard.rowBlabel.style.display = "none"
-    switchboard.rowClabel.style.display = "none"
-    switchboard.rowDlabel.style.display = "none"
-    switchboard.rowElabel.style.display = "none"
+    this.rowAlabel.style.display = "none"
+    this.rowBlabel.style.display = "none"
+    this.rowClabel.style.display = "none"
+    this.rowDlabel.style.display = "none"
+    this.rowElabel.style.display = "none"
     
 
-    switchboard.setStakes.style.display = "none"
-    switchboard.stakesSubmit.style.display = "none"
+    this.setStakes.style.display = "none"
+    this.stakesSubmit.style.display = "none"
 
   }
 
   getTheStakes () {
-    switchboard.setStakes.style.display = ""
-    switchboard.stakesSubmit.style.display = ""
+    this.setStakes.style.display = ""
+    this.stakesSubmit.style.display = ""
   }
 
 
   compressedLookOff () {
     // switchboard.theSlice.style.display = "none"
     //switchboard.theSlice.style.display = ""
-    switchboard.act1.style.display = ""
-    switchboard.act2.style.display = ""
-    switchboard.act3.style.display = ""
-    switchboard.act4.style.display = ""
-    switchboard.act5.style.display = ""
+    this.act1.style.display = ""
+    this.act2.style.display = ""
+    this.act3.style.display = ""
+    this.act4.style.display = ""
+    this.act5.style.display = ""
 
-    switchboard.rowAlabel.style.display = ""
-    switchboard.rowBlabel.style.display = ""
-    switchboard.rowClabel.style.display = ""
-    switchboard.rowDlabel.style.display = ""
-    switchboard.rowElabel.style.display = ""
+    this.rowAlabel.style.display = ""
+    this.rowBlabel.style.display = ""
+    this.rowClabel.style.display = ""
+    this.rowDlabel.style.display = ""
+    this.rowElabel.style.display = ""
   }
 
   turnItOn(){
-    switchboard.theSetup.addEventListener('click', () => {
-      talker.speak("Hello, please submit the escalating stakes of your story.");
-      talker.wait(3000)
-      switchboard.theSetup.innerHTML = ""
+    this.theSetup.addEventListener('click', () => {
+      this.talker.speak("Hello, Mira.  What do you think of the pretty colors?");
+      this.talker.wait(3000)
+      this.theSetup.innerHTML = ""
       this.getTheStakes()
       this.compressedLookOff()
     }, { once: true});
 
   }
  
-  // submitStakes() {
-  //   switchboard.submitStakes.addEventListener('click', () => {
-  //   talker.speak("Thank you for submitting.");
-  //   talker.wait(3000)
-  //   switchboard.setStakes.innerHTML = ""
-  //   let theStory = new Story(switchboard.stakes1, switchboard.stakes2, switchboard.stakes3, switchboard.stakes4, switchboard.stakes5)
-  //   }, { once: true})
-  // }
+  submitStakes() {
+    switchboard.submitStakes.addEventListener('click', () => {
+    this.talker.speak("Thank you for submitting.");
+    this.talker.wait(3000)
+    switchboard.setStakes.innerHTML = ""
+    let theStory = new Story(switchboard.stakes1, switchboard.stakes2, switchboard.stakes3, switchboard.stakes4, switchboard.stakes5)
+    }, { once: true})
+  }
 
 }

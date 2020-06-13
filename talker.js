@@ -1,4 +1,4 @@
-class Talker {
+export class Talker {
   constructor () {
     this.synth = window.speechSynthesis;
   }

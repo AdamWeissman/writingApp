@@ -1,4 +1,4 @@
-class Story {
+export class Story {
   constructor(stakes1, stakes2, stakes3, stakes4, stakes5) {
   this.s1 = stakes1
   this.s2 = stakes2
