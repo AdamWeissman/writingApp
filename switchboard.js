@@ -4,7 +4,10 @@ export class SwitchBoard {
     this.main = document.querySelector('main')
     this.theSetup = document.getElementById('theSetup')
     this.theSlice = document.getElementById('theSlice')
-    
+    this.theTable = document.getElementById('theTable')
+    this.theBottom = document.getElementById('theBottom')
+
+
     this.act1 = document.getElementById('act1')
     this.act2 = document.getElementById('act2')
     this.act3 = document.getElementById('act3')
@@ -102,7 +105,7 @@ export class SwitchBoard {
 
   turnItOn(){
     this.theSetup.addEventListener('click', () => {
-      this.talker.speak("Hello, Mira.  What do you think of the pretty colors?");
+      this.makeInput("Hi, What's your name?");
       this.talker.wait(3000)
       this.theSetup.innerHTML = ""
       this.getTheStakes()
@@ -112,12 +115,23 @@ export class SwitchBoard {
   }
  
   submitStakes() {
-    switchboard.submitStakes.addEventListener('click', () => {
+    this.submitStakes.addEventListener('click', () => {
     this.talker.speak("Thank you for submitting.");
     this.talker.wait(3000)
     switchboard.setStakes.innerHTML = ""
     let theStory = new Story(switchboard.stakes1, switchboard.stakes2, switchboard.stakes3, switchboard.stakes4, switchboard.stakes5)
     }, { once: true})
+  }
+
+  makeInput(question) { 
+    this.talker.speak(question)
+    let newThing = document.createElement("center");
+    let newQuestion = document.createTextNode(question); 
+    newThing.appendChild(newQuestion);  
+  
+    // add the newly created element and its content into the DOM 
+    let theVeryBottom = this.theBottom; 
+    document.body.insertBefore(newThing, theVeryBottom); 
   }
 
 }

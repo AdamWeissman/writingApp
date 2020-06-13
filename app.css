@@ -1,4 +1,4 @@
-table, th, td {
+#theTable, th, td {
   border: 5px solid black;
   font-size: 34px;
 }
@@ -450,4 +450,8 @@ table, th, td {
   box-shadow: 0px 5px 20px 0px rgba(26, 101, 158, 0.3), inset 0px 0px 20px 0px rgba(0, 58, 250, 0.995);
   animation: shadow-pulse6 3s infinite;
 
+}
+
+#theBottom {
+  
 }
