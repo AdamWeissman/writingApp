@@ -1,7 +1,22 @@
 #theTable, th, td {
   border: 5px solid black;
   font-size: 34px;
-}
+  padding: .2rem;
+  background-image: radial-gradient(rgb(255, 0, 242), rgb(0, 38, 103));
+  -moz-box-shadow: 5px 5px 5px 5px rgba(0, 2, 67, 0.892);
+  -webkit-box-shadow: 5px 5px 5x 5px rgba(0, 2, 67, 0.892);
+  box-shadow: 5px 5px 100px 20px rgba(0, 2, 67, 0.892), inset 0px 10px 20px 10px rgb(0, 38, 103);
+  animation: shadow-pulse0 5s infinite;
+} 
+
+
+@keyframes shadow-pulse0
+  {
+    50% {
+      box-shadow: 0px 0px 50px 5px rgb(255, 0, 242), inset 0px 15px 25px 15px rgb(0, 38, 103);
+    }
+  }
+
 
 @keyframes shadow-pulse
   {

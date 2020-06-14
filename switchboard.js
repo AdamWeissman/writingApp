@@ -1,7 +1,9 @@
 export class SwitchBoard {
-  constructor (speech) {
+  constructor (speech, story) {
     this.talker = speech 
+    this.story = story
     this.main = document.querySelector('main')
+    this.body = document.querySelector('body')
     this.theSetup = document.getElementById('theSetup')
     this.theSlice = document.getElementById('theSlice')
     this.theTable = document.getElementById('theTable')
@@ -51,13 +53,13 @@ export class SwitchBoard {
     this.rowEcolumn5 = document.getElementById('unityE1o1d_col5e')
 
 
-    this.setStakes= document.getElementById('setStakes')
-    this.stakesSubmit = document.getElementById('stakesSubmit')
-    this.stakes1 = document.getElementById('stakes1')
-    this.stakes2 = document.getElementById('stakes2')
-    this.stakes3 = document.getElementById('stakes3')
-    this.stakes4 = document.getElementById('stakes4')
-    this.stakes5 = document.getElementById('stakes5')
+    // this.setStakes= document.getElementById('setStakes')
+    // this.stakesSubmit = document.getElementById('stakesSubmit')
+    // this.stakes1 = document.getElementById('stakes1')
+    // this.stakes2 = document.getElementById('stakes2')
+    // this.stakes3 = document.getElementById('stakes3')
+    // this.stakes4 = document.getElementById('stakes4')
+    // this.stakes5 = document.getElementById('stakes5')
 
   }
   
@@ -74,22 +76,12 @@ export class SwitchBoard {
     this.rowClabel.style.display = "none"
     this.rowDlabel.style.display = "none"
     this.rowElabel.style.display = "none"
-    
-
-    this.setStakes.style.display = "none"
-    this.stakesSubmit.style.display = "none"
 
   }
-
-  getTheStakes () {
-    this.setStakes.style.display = ""
-    this.stakesSubmit.style.display = ""
-  }
-
 
   compressedLookOff () {
-    // switchboard.theSlice.style.display = "none"
-    //switchboard.theSlice.style.display = ""
+    this.theSlice.style.display = ""
+
     this.act1.style.display = ""
     this.act2.style.display = ""
     this.act3.style.display = ""
@@ -108,30 +100,26 @@ export class SwitchBoard {
       this.makeInput("Hi, What's your name?");
       this.talker.wait(3000)
       this.theSetup.innerHTML = ""
-      this.getTheStakes()
       this.compressedLookOff()
     }, { once: true});
 
   }
  
-  submitStakes() {
-    this.submitStakes.addEventListener('click', () => {
-    this.talker.speak("Thank you for submitting.");
-    this.talker.wait(3000)
-    switchboard.setStakes.innerHTML = ""
-    let theStory = new Story(switchboard.stakes1, switchboard.stakes2, switchboard.stakes3, switchboard.stakes4, switchboard.stakes5)
-    }, { once: true})
-  }
-
   makeInput(question) { 
     this.talker.speak(question)
-    let newThing = document.createElement("center");
-    let newQuestion = document.createTextNode(question); 
-    newThing.appendChild(newQuestion);  
+    let newThing = document.createElement("CENTER")
+    let newForm = document.createElement("FORM");
+    let newInput = document.createElement("INPUT");
+    let newSubmit = document.createElement("SUBMIT");   
+    newSubmit.setAttribute("type", "submit")
+    newThing.appendChild(newForm);
+    newForm.appendChild(newInput);
+    newInput.appendChild(newSubmit);
   
     // add the newly created element and its content into the DOM 
     let theVeryBottom = this.theBottom; 
-    document.body.insertBefore(newThing, theVeryBottom); 
+    this.body.insertBefore(newThing, null); 
   }
+
 
 }
