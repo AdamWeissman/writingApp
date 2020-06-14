@@ -130,7 +130,7 @@ export class SwitchBoard {
     newForm.addEventListener('submit', (event) => {
       event.preventDefault()
       this.talker.speak("YO! " + `${document.getElementById(identifier).value}` + "")
-    })
+    }) 
 
     console.log(identifier)
 
