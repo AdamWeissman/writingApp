@@ -97,7 +97,7 @@ export class SwitchBoard {
 
   turnItOn(){
     this.theSetup.addEventListener('click', () => {
-      this.makeInput("Hi, What's your name?");
+      this.makeInput("Hi, What's your name?", "firstName");
       this.talker.wait(3000)
       this.theSetup.innerHTML = ""
       this.compressedLookOff()
@@ -105,20 +105,35 @@ export class SwitchBoard {
 
   }
  
-  makeInput(question) { 
+  makeInput(question, identifier) { 
     this.talker.speak(question)
     let newThing = document.createElement("CENTER")
     let newForm = document.createElement("FORM");
     let newInput = document.createElement("INPUT");
-    let newSubmit = document.createElement("SUBMIT");   
-    newSubmit.setAttribute("type", "submit")
+    let newInputSubmit = document.createElement("INPUT");   
+  
+    newInput.setAttribute("id", identifier)
+    newInput.setAttribute("type", "text")
+    newInput.setAttribute("size", "55")
+    newInput.setAttribute("name", identifier)
+
+    newInputSubmit.setAttribute("id", "stakesSubmit")
+    newInputSubmit.setAttribute("type", "submit")
+    newInputSubmit.setAttribute("value", "CLICK")
+
     newThing.appendChild(newForm);
     newForm.appendChild(newInput);
-    newInput.appendChild(newSubmit);
-  
-    // add the newly created element and its content into the DOM 
-    let theVeryBottom = this.theBottom; 
+    newForm.appendChild(newInputSubmit);
+    
     this.body.insertBefore(newThing, null); 
+
+    newForm.addEventListener('submit', (event) => {
+      event.preventDefault()
+      this.talker.speak("YO! " + `${document.getElementById(identifier).value}` + "")
+    })
+
+    console.log(identifier)
+
   }
 
 
