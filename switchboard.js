@@ -105,6 +105,10 @@ export class SwitchBoard {
     }, { once: true});
 
   }
+
+  converter(codeString){
+    return eval(codeString).id
+  }
  
   makeInput(question, identifier) { 
     this.talker.speak(question)
@@ -131,7 +135,7 @@ export class SwitchBoard {
     newForm.addEventListener('submit', (event) => {
       event.preventDefault()
       debugger
-      this.talker.speak("YO WHAT UP! " + `${document.getElementById(identifier).value}`)
+      this.talker.speak("YO! " + `${document.getElementById(identifier).value}`)
       return this.identifier = `${document.getElementById(identifier).value}`
     }) 
 
