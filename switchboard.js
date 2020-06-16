@@ -2,6 +2,7 @@ export class SwitchBoard {
   constructor (speech, story) {
     this.talker = speech 
     this.story = story
+    this.firstName = ""
     this.main = document.querySelector('main')
     this.body = document.querySelector('body')
     this.theSetup = document.getElementById('theSetup')
@@ -129,10 +130,10 @@ export class SwitchBoard {
 
     newForm.addEventListener('submit', (event) => {
       event.preventDefault()
-      this.talker.speak("YO! " + `${document.getElementById(identifier).value}` + "")
+      debugger
+      this.talker.speak("YO WHAT UP! " + `${document.getElementById(identifier).value}`)
+      return this.identifier = `${document.getElementById(identifier).value}`
     }) 
-
-    console.log(identifier)
 
   }
 

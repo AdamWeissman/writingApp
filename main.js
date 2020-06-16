@@ -9,4 +9,3 @@ const switchboard = new SwitchBoard(talker, story)
 
 switchboard.compressedLook()
 switchboard.turnItOn()
-
