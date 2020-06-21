@@ -5,7 +5,7 @@ import { SwitchBoard } from './switchboard.js'
 
 const talker = new Talker()
 let story = new Story() 
-const switchboard = new SwitchBoard(talker, story) 
+let switchboard = new SwitchBoard(talker, story) 
 
 switchboard.compressedLook()
 switchboard.turnItOn()

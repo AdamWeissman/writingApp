@@ -131,18 +131,11 @@ export class SwitchBoard {
 
     newForm.addEventListener('submit', (event) => {
       event.preventDefault()
+      debugger
       this.talker.speak("YO! " + `${document.getElementById(identifier).value}`)
       
       eval("this."+identifier+" = "+JSON.stringify(`${document.getElementById(identifier).value}`)) //some metaprogramming right here....
       
-      //eval(`${"this."+identifier}`) // this line returns the value of this.firstName
-
-      // eval((`${"this."+identifier}`) = JSON.stringify(`${document.getElementById(identifier).value}`))
-      // eval(`${"this."+identifier}` + "=" + `${document.getElementById(identifier).value}`)
-      
-      // const replacement = "this" + "." + identifier
-      // const value = `${document.getElementById(identifier).value}`
-      // eval(replacement + "=" + value);
     })
   }
 
