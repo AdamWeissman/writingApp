@@ -4,6 +4,7 @@ export class SwitchBoard {
     this.story = story
     this.firstName = ""
     this.lastName = ""
+    this.projectName = ""
     this.main = document.querySelector('main')
     this.body = document.querySelector('body')
     this.theSetup = document.getElementById('theSetup')
@@ -102,11 +103,17 @@ export class SwitchBoard {
     this.theSetup.addEventListener('click', () => {
       this.theSetup.innerHTML = ""
       this.compressedLookOff()
-      return (this.makeInput("Hi, What's your name?", "firstName"))
+      this.makeInput("Hi, What's your name?", "firstName")
     }, { once: true});
-    
   }
- 
+// if i'm thinking about this correctly i dont think so...but could be wrong! do what makes sense
+// i was thinking something like
+// const scripts (name this w/e) = ["your first name", "what your project"]
+// for (const script of scripts) {
+//   makeinput(script, identifier)
+// later!
+
+
   makeInput(question, identifier) { 
     this.talker.speak(question)
     let newThing = document.createElement("CENTER")
@@ -131,11 +138,16 @@ export class SwitchBoard {
 
     newForm.addEventListener('submit', (event) => {
       event.preventDefault()
-      debugger
       this.talker.speak("YO! " + `${document.getElementById(identifier).value}`)
+      console.log("NAME BEFORE", this.firstName);
       
       eval("this."+identifier+" = "+JSON.stringify(`${document.getElementById(identifier).value}`)) //some metaprogramming right here....
-      
+      console.log("NAME AFTER", this.firstName) 
+  
+      newThing.style.display = "none"
+      newForm.style.display = "none"
+      newInput.style.display = "none"
+      newInputSubmit.style.display = "none"
     })
   }
 
