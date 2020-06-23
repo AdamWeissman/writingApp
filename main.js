@@ -27,17 +27,20 @@ class runTimeThing {
   }
   
     mainLoop () {
-    this.switchboard.compressedLook(),
-    this.switchboard.turnItOn(),
-  
-    this.questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()}]
+      this.questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()}]
       
-    for (let element of this.questions) {
-      element();
-      console.log("this is", element)  
-    };
+      this.switchboard.compressedLook()
+      const first = Promise.resolve(this.switchboard.turnItOn())
+      const two = first.then(function() {
+      for (let element of this.questions) {
+        //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
+        //element();  
+        return console.log("this is", element)  
+        };
+    });
   }
-} 
+}
+  
 
 const rTT = new runTimeThing(talker, story, switchboard)
 
