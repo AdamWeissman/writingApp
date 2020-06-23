@@ -3,7 +3,7 @@ export class Talker {
     this.synth = window.speechSynthesis;
   }
 
-  speak(text) {  
+  async speak(text) {  
     let utterThis;
     if (this.synth.speaking) {
           console.error('speechSynthesis.speaking');

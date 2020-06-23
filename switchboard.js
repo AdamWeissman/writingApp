@@ -143,7 +143,7 @@ export class SwitchBoard {
       eval("this.story."+identifier+" = "+JSON.stringify(`${document.getElementById(identifier).value}`)) //some metaprogramming right here....
       console.log("NAME AFTER", this.story.firstName) 
   
-      newThing.style.display = "none"
+      newThing.style.display = "none",
       newForm.style.display = "none"
       newInput.style.display = "none"
       newInputSubmit.style.display = "none"

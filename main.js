@@ -14,31 +14,30 @@ class runTimeThing {
     this.switchboard = swb
   }
 
-  question1 () { 
+  async question1 () { 
     this.switchboard.makeInput("Hi, What's your name?", "firstName")
   }
 
-  question2 () {
+  async question2 () {
     this.switchboard.makeInput("What do you want to call this project?", "projectName")
   }
 
-  question3 () {
+  async question3 () {
     this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
   }
   
-  mainLoop () {
+    mainLoop () {
     this.switchboard.compressedLook(),
-    this.switchboard.turnItOn()  
+    this.switchboard.turnItOn(),
   
-    this.questions = ["this.question1", "this.question2", "this.question3"]
-  
-    debugger;
-    for (let q of this.questions) {
-      q()()
-     }
-    } 
-
+    this.questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()}]
+      
+    for (let element of this.questions) {
+      element();
+      console.log("this is", element)  
+    };
   }
+} 
 
 const rTT = new runTimeThing(talker, story, switchboard)
 
