@@ -14,31 +14,29 @@ class runTimeThing {
     this.switchboard = swb
   }
 
-  async question1 () { 
-    this.switchboard.makeInput("Hi, What's your name?", "firstName")
-  }
+  // question1 () { 
+  //   this.switchboard.makeInput("Hi, What's your name?", "firstName")
+  // }
 
-  async question2 () {
-    this.switchboard.makeInput("What do you want to call this project?", "projectName")
-  }
+  // question2 () {
+  //   this.switchboard.makeInput("What do you want to call this project?", "projectName")
+  // }
 
-  async question3 () {
-    this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
-  }
+  // question3 () {
+  //   this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
+  // }
   
-    mainLoop () {
-      this.questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()}]
-      
+    async mainLoop () {
       this.switchboard.compressedLook()
-      const first = Promise.resolve(this.switchboard.turnItOn())
-      const two = first.then(function() {
-      for (let element of this.questions) {
-        //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
-        //element();  
-        return console.log("this is", element)  
-        };
-    });
-  }
+      await this.switchboard.turnItOn()//.then
+      //(this.switchboard.questionLoop())
+      // this.questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()}]
+      
+      // this.switchboard.compressedLook() 
+      // for (let element of this.questions) {
+      //   async () => new Promise(element())
+      //   };
+    };
 }
   
 

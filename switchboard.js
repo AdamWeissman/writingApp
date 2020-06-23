@@ -97,14 +97,34 @@ export class SwitchBoard {
     this.rowElabel.style.display = ""
   }
 
+  question1 () { 
+    this.makeInput("Hi, What's your name?", "firstName")
+  }
+
+  question2 () {
+    this.makeInput("What do you want to call this project?", "projectName")
+  }
+
+  question3 () {
+    this.makeInput("What's the main premise of this story?", "thePremise")
+  }
 
   turnItOn(){
     this.theSetup.addEventListener('click', () => {
       this.theSetup.innerHTML = ""
       this.compressedLookOff()
-      // this.makeInput("Hi, What's your name?", "firstName")
+      this.makeInput("Hi, What's your name?", "firstName")
     }, { once: true});
   }
+
+  questionLoop () {
+    this.questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()}]
+    (
+      async function () {for await (let element of this.questions) {
+      console.log(element)
+    }}
+    ) 
+}
 // if i'm thinking about this correctly i dont think so...but could be wrong! do what makes sense
 // i was thinking something like
 // const scripts (name this w/e) = ["your first name", "what your project"]
