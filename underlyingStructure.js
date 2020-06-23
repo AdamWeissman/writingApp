@@ -1,6 +1,9 @@
 export class Story {
   constructor() {
-  this.actsUnity = [];
+  this.firstName = ""
+  this.projectName = ""
+  this.thePremise = ""
+
   this.act1;
   this.act2;
   this.act3;

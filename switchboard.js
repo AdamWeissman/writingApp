@@ -2,9 +2,8 @@ export class SwitchBoard {
   constructor (speech, story) {
     this.talker = speech 
     this.story = story
-    this.firstName = ""
-    this.lastName = ""
-    this.projectName = ""
+    // this.firstName = ""
+    // this.projectName = ""
     this.main = document.querySelector('main')
     this.body = document.querySelector('body')
     this.theSetup = document.getElementById('theSetup')
@@ -103,7 +102,7 @@ export class SwitchBoard {
     this.theSetup.addEventListener('click', () => {
       this.theSetup.innerHTML = ""
       this.compressedLookOff()
-      this.makeInput("Hi, What's your name?", "firstName")
+      // this.makeInput("Hi, What's your name?", "firstName")
     }, { once: true});
   }
 // if i'm thinking about this correctly i dont think so...but could be wrong! do what makes sense
@@ -139,10 +138,10 @@ export class SwitchBoard {
     newForm.addEventListener('submit', (event) => {
       event.preventDefault()
       this.talker.speak("YO! " + `${document.getElementById(identifier).value}`)
-      console.log("NAME BEFORE", this.firstName);
+      console.log("NAME BEFORE", this.story.firstName);
       
-      eval("this."+identifier+" = "+JSON.stringify(`${document.getElementById(identifier).value}`)) //some metaprogramming right here....
-      console.log("NAME AFTER", this.firstName) 
+      eval("this.story."+identifier+" = "+JSON.stringify(`${document.getElementById(identifier).value}`)) //some metaprogramming right here....
+      console.log("NAME AFTER", this.story.firstName) 
   
       newThing.style.display = "none"
       newForm.style.display = "none"

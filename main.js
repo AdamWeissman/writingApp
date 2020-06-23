@@ -13,16 +13,31 @@ class runTimeThing {
     this.story = s
     this.switchboard = swb
   }
+
+  question1 () { 
+    this.switchboard.makeInput("Hi, What's your name?", "firstName")
+  }
+
+  question2 () {
+    this.switchboard.makeInput("What do you want to call this project?", "projectName")
+  }
+
+  question3 () {
+    this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
+  }
   
   mainLoop () {
     this.switchboard.compressedLook(),
     this.switchboard.turnItOn()  
-    // so the debugger i just put in will work
+  
+    this.questions = ["this.question1", "this.question2", "this.question3"]
+  
+    debugger;
+    for (let q of this.questions) {
+      q()()
+     }
     } 
 
-  question1 () {
-    this.switchboard.makeInput("Hi, What's your name?", "firstName")
-  }
   }
 
 const rTT = new runTimeThing(talker, story, switchboard)
