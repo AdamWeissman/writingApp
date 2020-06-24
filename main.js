@@ -14,28 +14,49 @@ class runTimeThing {
     this.switchboard = swb
   }
 
-  // question1 () { 
-  //   this.switchboard.makeInput("Hi, What's your name?", "firstName")
-  // }
+  async question1 () { 
+    await this.switchboard.makeInput("Hi, What's your name?", "firstName")
+  }
 
-  // question2 () {
-  //   this.switchboard.makeInput("What do you want to call this project?", "projectName")
-  // }
+  async question2 () {
+    await this.switchboard.makeInput("What do you want to call this project?", "projectName")
+  }
 
-  // question3 () {
-  //   this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
-  // }
+  async question3 () {
+    await this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
+  }
+
+  async questionLoop () {
+    this.questions = [async () => { await this.question1()}, async () => { await this.question2()}, async () => { await this.question3()}]
+    
+    for await (let element of this.questions) {
+      // console.log(element)
+      element().then(alert("yo"))
+    }
+
+    // this.questions[0]().then(
+    //   alert("one")).then(
+    //   this.questions[1]()).then(
+    //     alert("two")).then(
+    //       this.questions[2]()).then(
+    //         alert("three"))
+
+  }
+
+  turnItOn(){
+    this.switchboard.theSetup.addEventListener('click', () => {
+      this.switchboard.theSetup.innerHTML = ""
+      this.switchboard.compressedLookOff()
+      //this.switchboard.makeInput("Hi, What's your name?", "firstName")
+    }, { once: true});
+  }
   
-    async mainLoop () {
-      this.switchboard.compressedLook()
-      await this.switchboard.turnItOn()//.then
-      //(this.switchboard.questionLoop())
-      // this.questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()}]
-      
-      // this.switchboard.compressedLook() 
-      // for (let element of this.questions) {
-      //   async () => new Promise(element())
-      //   };
+  mainLoop () {
+    this.switchboard.compressedLook()
+    this.turnItOn()
+    this.questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()}]
+    this.questionLoop()
+
     };
 }
   
@@ -44,18 +65,3 @@ const rTT = new runTimeThing(talker, story, switchboard)
 
 rTT.mainLoop()
 
-// I typed this in zoom chat too
-// but you can't access variables in your program in the console
-// you would have to put a debugger
- // here you will have access to everything above
-// not that i can see from what you've shown me
-// try running it with debugger!
-
-
-
-// switchboard.compressedLook()
-// switchboard.turnItOn()
-//switchboard.makeInput("Hi, What's your project?", "projectName")
-//}
-
-// where is firstName set?
