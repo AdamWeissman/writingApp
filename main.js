@@ -26,27 +26,27 @@ class runTimeThing {
     this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
   }
 
-  questionLoop () {
+  async questionLoop () {
 
-    this.questions = [async () => { this.question1()}, async () => { this.question2()}, (async ) => { this.question3()}]
+    this.questions = [async () => { this.question1()}, async () => { this.question2()}, async () => { this.question3()}]
   
-    const first = new Promise((resolve, reject) => {
-      resolve(console.log("hi"))
-    })
-    first.then(()=>(
-      this.questions[0]()
-      )
-    ).then(()=>(
-      this.questions[1]()
-      )
-    )
-  }
- // const first = new Promise((resolve, reject) => {
-    //   resolve(this.turnItOn())
+    for await (let element of this.questions) {
+      async function x() {element()};
+      await x();
+    }
+    // const first = new Promise((resolve, reject) => {
+    //   resolve(this.questions[0]())
     // })
-    // first.then(()=>(
-    //   this.question1())
+
+    // first.then(async () => (
+    //   this.questions[1]()
+    //   )
+    // ).then(()=>(
+    //   this.questions[2]()
+    //   )
     // )
+  }
+
 
   turnItOn(){
     this.switchboard.theSetup.addEventListener('click', () => {
