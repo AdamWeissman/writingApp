@@ -14,52 +14,61 @@ class runTimeThing {
     this.switchboard = swb
   }
 
-  async question1 () { 
-    await this.switchboard.makeInput("Hi, What's your name?", "firstName")
+  question1 () { 
+    this.switchboard.makeInput("Hi, What's your name?", "firstName")
   }
 
-  async question2 () {
-    await this.switchboard.makeInput("What do you want to call this project?", "projectName")
+  question2 () {
+    this.switchboard.makeInput("What do you want to call this project?", "projectName")
   }
 
-  async question3 () {
-    await this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
+  question3 () {
+    this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
   }
 
-  async questionLoop () {
-    this.questions = [async () => { await this.question1()}, async () => { await this.question2()}, async () => { await this.question3()}]
-    
-    for await (let element of this.questions) {
-      // console.log(element)
-      element().then(alert("yo"))
-    }
+  questionLoop () {
 
-    // this.questions[0]().then(
-    //   alert("one")).then(
-    //   this.questions[1]()).then(
-    //     alert("two")).then(
-    //       this.questions[2]()).then(
-    //         alert("three"))
-
+    this.questions = [async () => { this.question1()}, async () => { this.question2()}, (async ) => { this.question3()}]
+  
+    const first = new Promise((resolve, reject) => {
+      resolve(console.log("hi"))
+    })
+    first.then(()=>(
+      this.questions[0]()
+      )
+    ).then(()=>(
+      this.questions[1]()
+      )
+    )
   }
+ // const first = new Promise((resolve, reject) => {
+    //   resolve(this.turnItOn())
+    // })
+    // first.then(()=>(
+    //   this.question1())
+    // )
 
   turnItOn(){
     this.switchboard.theSetup.addEventListener('click', () => {
       this.switchboard.theSetup.innerHTML = ""
       this.switchboard.compressedLookOff()
+      this.questionLoop()
       //this.switchboard.makeInput("Hi, What's your name?", "firstName")
     }, { once: true});
   }
   
   mainLoop () {
+    this.questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()}]
     this.switchboard.compressedLook()
     this.turnItOn()
-    this.questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()}]
-    this.questionLoop()
-
-    };
-}
-  
+    // const first = new Promise((resolve, reject) => {
+    //   resolve(this.turnItOn())
+    // })
+    // first.then(()=>(
+    //   this.question1())
+    // )
+  }
+}  
 
 const rTT = new runTimeThing(talker, story, switchboard)
 
