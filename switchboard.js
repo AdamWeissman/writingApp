@@ -105,12 +105,9 @@ export class SwitchBoard {
   //   }, { once: true});
   // }
 
-  //submitSwitch = 0
-
-  async makeInput(question, identifier) {
-    //if (checkValue(SubmitSwitch))
-    console.log(this.submitSwitch)
-
+  makeInput(question, identifier) {
+    let miSwitch = 0
+    console.log(miSwitch)
     this.talker.speak(question)
     let newThing = document.createElement("CENTER")
     let newForm = document.createElement("FORM");
@@ -133,7 +130,6 @@ export class SwitchBoard {
     this.body.insertBefore(newThing, null); 
 
     newForm.addEventListener('submit', (event) => {
-      //submitSwitch2 = this.submitSwitch
       event.preventDefault()
       this.talker.speak("YO! " + `${document.getElementById(identifier).value}`)
       console.log("NAME BEFORE", this.story.firstName);
@@ -141,33 +137,22 @@ export class SwitchBoard {
       eval("this.story."+identifier+" = "+JSON.stringify(`${document.getElementById(identifier).value}`)) //some metaprogramming right here....
       console.log("NAME AFTER", this.story.firstName) 
     
-      async function styleOff() {
+      // function styleOff() {
         newThing.style.display = "none";
         newForm.style.display = "none";
         newInput.style.display = "none"
         newInputSubmit.style.display = "none"
-      }
+        miSwitch += 1
+        console.log(miSwitch)
+      // }
 
-      async function displaysOff() {
-        console.log("displays Off");
-        styleOff()
-      }
+      // function displaysOff() {
+      //   console.log("displays Off");
+      //   styleOff()
+      // }
 
-      displaysOff()
-      //console.log(this.submitSwitch)
-      //checkValue(this.submitSwitch)
-      // if (checkValue(submitSwitch) == 1)
-      //   return eval("NEXT")
+      // displaysOff()
     })
-
-    // function checkValue(x) {
-    //   if (x === 0)
-    //   return console.log("it's 0")
-    //   else (x === 1)
-    //   return console.log("it's 1")
-    // } 
-
-    //checkValue(this.submitSwitch)
     
   }
 

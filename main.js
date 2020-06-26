@@ -30,9 +30,9 @@ class runTimeThing {
 
     this.questions = [async () => { this.question1()}, async () => { this.question2()}, async () => { this.question3()}]
   
-    for await (let element of this.questions) {
-      async function x() {element()};
-      await x();
+    for (let element of this.questions) {
+      element();
+      debugger;
     }
     // const first = new Promise((resolve, reject) => {
     //   resolve(this.questions[0]())
