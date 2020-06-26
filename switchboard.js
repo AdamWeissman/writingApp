@@ -106,8 +106,8 @@ export class SwitchBoard {
   // }
 
   makeInput(question, identifier) {
-    let miSwitch = 0
-    console.log(miSwitch)
+    // miSwitch = 0
+    // console.log(miSwitch)
     this.talker.speak(question)
     let newThing = document.createElement("CENTER")
     let newForm = document.createElement("FORM");
@@ -142,8 +142,8 @@ export class SwitchBoard {
         newForm.style.display = "none";
         newInput.style.display = "none"
         newInputSubmit.style.display = "none"
-        miSwitch += 1
-        console.log(miSwitch)
+        // miSwitch += 1
+        // console.log(miSwitch)
       // }
 
       // function displaysOff() {

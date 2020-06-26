@@ -26,14 +26,20 @@ class runTimeThing {
     this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
   }
 
-  async questionLoop () {
-
-    this.questions = [async () => { this.question1()}, async () => { this.question2()}, async () => { this.question3()}]
   
-    for (let element of this.questions) {
-      element();
-      debugger;
-    }
+
+  async questionLoop () {
+    this.questions = [() => { this.question1()},  () => { this.question2()}, () => { this.question3()}]
+  
+    for await (let element of this.questions) {
+      element();    
+      this.clickyWicky = document.getElementById("stakesSubmit");
+      this.clickyWicky.onsubmit
+      if (this.clickyWicky.onsubmit === true) { break; }
+        console.log("submit is true");
+      // elsif (this.clickyWicky === false) { break; }
+      // console.log("submit is false")
+    }   
     // const first = new Promise((resolve, reject) => {
     //   resolve(this.questions[0]())
     // })
