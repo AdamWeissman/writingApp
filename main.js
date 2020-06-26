@@ -15,31 +15,37 @@ class runTimeThing {
   }
 
   question1 () { 
-    this.switchboard.makeInput("Hi, What's your name?", "firstName")
+    this.switchboard.makeInput("Hi, What's your name?", "firstName", "Nice to meet you ")
   }
 
   question2 () {
-    this.switchboard.makeInput("What do you want to call this project?", "projectName")
+    this.switchboard.makeInput("What do you want to call this project?", "projectName", "Your project is: ")
   }
 
   question3 () {
-    this.switchboard.makeInput("What's the main premise of this story?", "thePremise")
+    this.switchboard.makeInput("What's the main premise of this story?", "thePremise", "Your premise is: ")
   }
 
   
 
-  async questionLoop () {
+  questionLoop () {
     this.questions = [() => { this.question1()},  () => { this.question2()}, () => { this.question3()}]
   
-    for await (let element of this.questions) {
-      element();    
-      this.clickyWicky = document.getElementById("stakesSubmit");
-      this.clickyWicky.onsubmit
-      if (this.clickyWicky.onsubmit === true) { break; }
-        console.log("submit is true");
+    for (let element of this.questions) {
+      element().then()(
+      this.clickyWicky = document.getElementById("stakesSubmit")).
+      then()(
+      this.clickyWicky.addEventListener('submit', (event) => {
+        console.log("OKAY")
+      }))
+    }
+  }   
+
+      // if (this.clickyWicky.onsubmit === true) { break; }
+      //   console.log("submit is true");
       // elsif (this.clickyWicky === false) { break; }
       // console.log("submit is false")
-    }   
+    
     // const first = new Promise((resolve, reject) => {
     //   resolve(this.questions[0]())
     // })
@@ -51,7 +57,7 @@ class runTimeThing {
     //   this.questions[2]()
     //   )
     // )
-  }
+
 
 
   turnItOn(){

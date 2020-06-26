@@ -97,17 +97,7 @@ export class SwitchBoard {
     this.rowElabel.style.display = ""
   }
 
-  // turnItOn(){
-  //   this.theSetup.addEventListener('click', () => {
-  //     this.theSetup.innerHTML = ""
-  //     this.compressedLookOff()
-  //     //this.makeInput("Hi, What's your name?", "firstName")
-  //   }, { once: true});
-  // }
-
-  makeInput(question, identifier) {
-    // miSwitch = 0
-    // console.log(miSwitch)
+  makeInput(question, identifier, reply) {
     this.talker.speak(question)
     let newThing = document.createElement("CENTER")
     let newForm = document.createElement("FORM");
@@ -131,27 +121,17 @@ export class SwitchBoard {
 
     newForm.addEventListener('submit', (event) => {
       event.preventDefault()
-      this.talker.speak("YO! " + `${document.getElementById(identifier).value}`)
+      this.talker.speak(`${reply}` + `${document.getElementById(identifier).value}`)
       console.log("NAME BEFORE", this.story.firstName);
       
       eval("this.story."+identifier+" = "+JSON.stringify(`${document.getElementById(identifier).value}`)) //some metaprogramming right here....
       console.log("NAME AFTER", this.story.firstName) 
     
-      // function styleOff() {
         newThing.style.display = "none";
         newForm.style.display = "none";
         newInput.style.display = "none"
         newInputSubmit.style.display = "none"
-        // miSwitch += 1
-        // console.log(miSwitch)
-      // }
 
-      // function displaysOff() {
-      //   console.log("displays Off");
-      //   styleOff()
-      // }
-
-      // displaysOff()
     })
     
   }
