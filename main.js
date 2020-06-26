@@ -30,16 +30,37 @@ class runTimeThing {
 
   questionLoop () {
     this.questions = [() => { this.question1()},  () => { this.question2()}, () => { this.question3()}]
-  
+    let switchGate = "thou shall pass"
+    
     for (let element of this.questions) {
-      element().then()(
-      this.clickyWicky = document.getElementById("stakesSubmit")).
-      then()(
-      this.clickyWicky.addEventListener('submit', (event) => {
-        console.log("OKAY")
-      }))
+      
+      if (switchGate == "thou shall pass") {
+        element()
+        switchGate = "thou shalt not pass"
+        if (switchGate == "thou shalt not pass" ) {
+            this.clickyWicky = document.getElementById("stakesSubmit")
+              this.clickyWicky.addEventListener('click', (event) => {
+              switchGate = "thou shall pass"
+              console.log(switchGate)
+              this.talker.wait(5000)
+              //why does it exit the entire loop here?
+              })
+            }
+          }
+        }
     }
-  }   
+      // } else if (switchGate === "thou shalt not pass" ) {
+      //   this.clickyWicky = document.getElementById("stakesSubmit")
+      //   this.clickyWicky.addEventListener('click', (event) => {
+      //   switchGate = "thou shall also pass"
+      //   console.log(switchGate)}
+      //   )
+      // } else if (switchGate === "thou shall also pass" ) {
+      //   element()
+      //   switchGate = "thou shalt not pass"
+      //   console.log(switchGate)
+       
+   
 
       // if (this.clickyWicky.onsubmit === true) { break; }
       //   console.log("submit is true");
