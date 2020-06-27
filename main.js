@@ -36,77 +36,24 @@ class runTimeThing {
     () => { this.question3()},
     () => { this.question4()},]
   
-  // pausometer () {
-    // return new Promise(resolve => {
-    //   const func = function() { 
-    //     console.log('responded')
-    //     this.clickyWicky.removeEventListener('click', this.func)
-    //     resolve()
-    //   }
-  //     // this.clickyWicky = document.getElementById("stakesSubmit")
-  //   })
+  // wasClicked () {
+  //     return new Promise(resolve => {
+  //       const func = function() { 
+  //         console.log('responded')
+  //         this.removeEventListener('click', func)
+  //         resolve()
+  //       }
+  //       this.huh = document.getElementById('stakesSubmit')
+  //       this.huh.addEventListener('click', func)
+  //     })
   // }
 
-  // async questionLoop () {
-  //   for (let element of this.questions) {
-  //     element().then(async ()=>(
-  //     this.clickyWicky = document.getElementById("stakesSubmit"),
-  //     this.clickyWicky.addEventListener('click', this.func),
-  //     await this.pausometer()))
-  //   } 
-  // } 
-
-
-
-  //switchGate = "thou shall pass"
-  
-  // questionLoop () {
-  
-  //     for (let element of this.questions) {
-  //       if (this.switchGate == "thou shall pass") {
-  //         //this.questionLoop()
-  //         element() //this makes it talk and delivers input
-  //         this.switchGate = "thou shalt NOT pass" //this prevents from moving to the next element
-  //         this.questions.shift() //this removes the aforementioned element from the loop so next one is up
-  //         this.questionLoop()} //this goes back to the top so you can get to the else if
-  //       else if (this.switchGate == "thou shalt NOT pass") {
-  //         this.clickyWicky = document.getElementById("stakesSubmit")
-  //         this.clickyWicky.addEventListener('click', (event) => {
-  //           this.switchGate = "thou shall pass" //this allows you to return to the top of the loop
-  //           console.log(this.switchGate)
-  //           //this.clickyWicky.removeEventListener('click', (event))
-  //           this.talker.wait(500)
-  //           console.log("what now")
-  //           this.questionLoop() })
-  //       }        
-  //     }
-  // } 
-
-
-  // questionLoop () {
-  //   // this.questions = [() => { this.question1()},  () => { this.question2()}, () => { this.question3()}]
-  //   let switchGate = "thou shall pass"
-  //       for (let element of this.questions) {
-  //         if (switchGate == "thou shall pass") {
-  //           element()
-  //           this.questions.shift()
-  //           switchGate = "thou shalt not pass"
-            
-  //           if (switchGate == "thou shalt not pass" ) {
-  //               this.clickyWicky = document.getElementById("stakesSubmit")
-  //                 this.clickyWicky.addEventListener('click', (event) => {
-  //                   switchGate = "thou shall pass"
-  //                   this.talker.wait(1500)
-                    
-  //                   this.questionLoop()
-                    
-  //                 })
-  //           }
-  //         } 
-  //       }
-  // } 
-
-
+  async questionLoop() {
+    for (const question of this.questions) {
+      question()
+      continue
+    }
+  }
 
   turnItOn(){
     this.switchboard.theSetup.addEventListener('click', () => {

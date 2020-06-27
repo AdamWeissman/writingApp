@@ -97,8 +97,20 @@ export class SwitchBoard {
     this.rowElabel.style.display = ""
   }
 
-  makeInput(question, identifier, reply) {
-    this.talker.speak(question)
+  async makeInput(question, identifier, reply) {
+    
+    let waitForThis = async function () {
+      return new Promise(resolve => {
+        const doThisFirst = function() { 
+          this.talker.speak(question) //talker undefined
+          resolve()
+          }
+        doThisFirst()
+      })}
+
+    await waitForThis()
+
+
     let newThing = document.createElement("CENTER")
     let newForm = document.createElement("FORM");
     let newInput = document.createElement("INPUT");
@@ -122,17 +134,19 @@ export class SwitchBoard {
     newForm.addEventListener('submit', (event) => {
       event.preventDefault()
       this.talker.speak(`${reply}` + `${document.getElementById(identifier).value}`)
-      console.log("NAME BEFORE", this.story.firstName);
+      console.log("BEFORE", `this.story.${identifier}`, eval(`this.story.${identifier}`));
       
       eval("this.story."+identifier+" = "+JSON.stringify(`${document.getElementById(identifier).value}`)) //some metaprogramming right here....
-      console.log("NAME AFTER", this.story.firstName) 
+      console.log("AFTER", eval(`this.story.${identifier}`)) 
     
-        newThing.style.display = "none";
-        newForm.style.display = "none";
-        newInput.style.display = "none"
-        newInputSubmit.style.display = "none"
+      newThing.style.display = "none";
+      newForm.style.display = "none";
+      newInput.style.display = "none"
+      newInputSubmit.style.display = "none"      
 
     })
+
+
     
   }
 
