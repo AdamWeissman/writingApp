@@ -15,42 +15,33 @@ class runTimeThing {
   }
 
   question1 () { 
-    this.switchboard.makeInput("Hi, What's your name?", "firstName", "Nice to meet you ")
+    return this.switchboard.makeInput("Hi, What's your name?", "firstName", "Nice to meet you ")
   }
 
   question2 () {
-    this.switchboard.makeInput("What do you want to call this project?", "projectName", "Your project is: ")
+    return this.switchboard.makeInput("What do you want to call this project?", "projectName", "Your project is: ")
   }
 
   question3 () {
-    this.switchboard.makeInput("What's the main premise of this story?", "thePremise", "Your premise is: ")
+    return this.switchboard.makeInput("What's the main premise of this story?", "thePremise", "Your premise is: ")
   }
 
   question4 () {
-    this.switchboard.makeInput("What is the first risk associated with this premise?", "riskUnity", "Your first risk is: ")
+    return this.switchboard.makeInput("What is the first risk associated with this premise?", "riskUnity", "Your first risk is: ")
   }
 
   questions = [
-    () => { this.question1()},
-    () => { this.question2()},
-    () => { this.question3()},
-    () => { this.question4()},]
+    () => this.question1(),
+    () => this.question2(),
+    () => this.question3(),
+    () => this.question4()]
   
-  // wasClicked () {
-  //     return new Promise(resolve => {
-  //       const func = function() { 
-  //         console.log('responded')
-  //         this.removeEventListener('click', func)
-  //         resolve()
-  //       }
-  //       this.huh = document.getElementById('stakesSubmit')
-  //       this.huh.addEventListener('click', func)
-  //     })
-  // }
-
+ 
   async questionLoop() {
     for (const question of this.questions) {
-      question()
+      await question()
+      
+      // this.waitForThis()
       continue
     }
   }

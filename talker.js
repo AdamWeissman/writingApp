@@ -3,25 +3,25 @@ export class Talker {
     this.synth = window.speechSynthesis;
   }
 
-  async speak(text) {  
+  speak(text) {  
     let utterThis;
-    if (this.synth.speaking) {
-          console.error('speechSynthesis.speaking');
-          return;
-      }
-      if (text !== '') {
-        const voices = this.synth.getVoices();
-        utterThis = new SpeechSynthesisUtterance(text) 
-        try {
-          utterThis.pitch = 1.0;
-          utterThis.rate = .9;
-          utterThis.voice = voices[18]}
-        catch {
-          utterThis.pitch = 1.7;
-          utterThis.rate = .7;
-          utterThis.voice = voices[0]}
-        //leaves voice as default
-      }
+    // if (this.synth.speaking) {
+    //   console.error('speechSynthesis.speaking');
+    //   return;
+    // }
+    if (text !== '') {
+      const voices = this.synth.getVoices();
+      utterThis = new SpeechSynthesisUtterance(text) 
+      try {
+        utterThis.pitch = 1.0;
+        utterThis.rate = .9;
+        utterThis.voice = voices[18]}
+      catch {
+        utterThis.pitch = 1.7;
+        utterThis.rate = .7;
+        utterThis.voice = voices[0]}
+      //leaves voice as default
+    }
       
       utterThis.onend = function (event) {
           console.log('SpeechSynthesisUtterance.onend');

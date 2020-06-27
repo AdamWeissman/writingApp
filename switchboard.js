@@ -97,19 +97,10 @@ export class SwitchBoard {
     this.rowElabel.style.display = ""
   }
 
-  async makeInput(question, identifier, reply) {
+  makeInput(question, identifier, reply) {
+    const talker = this.talker
     
-    let waitForThis = async function () {
-      return new Promise(resolve => {
-        const doThisFirst = function() { 
-          this.talker.speak(question) //talker undefined
-          resolve()
-          }
-        doThisFirst()
-      })}
-
-    await waitForThis()
-
+    talker.speak(question)
 
     let newThing = document.createElement("CENTER")
     let newForm = document.createElement("FORM");
@@ -130,25 +121,43 @@ export class SwitchBoard {
     newForm.appendChild(newInputSubmit);
     
     this.body.insertBefore(newThing, null); 
-
-    newForm.addEventListener('submit', (event) => {
-      event.preventDefault()
-      this.talker.speak(`${reply}` + `${document.getElementById(identifier).value}`)
-      console.log("BEFORE", `this.story.${identifier}`, eval(`this.story.${identifier}`));
-      
-      eval("this.story."+identifier+" = "+JSON.stringify(`${document.getElementById(identifier).value}`)) //some metaprogramming right here....
-      console.log("AFTER", eval(`this.story.${identifier}`)) 
     
-      newThing.style.display = "none";
-      newForm.style.display = "none";
-      newInput.style.display = "none"
-      newInputSubmit.style.display = "none"      
-
+    return new Promise(resolve => {
+      const submitHandler = () => {
+        event.preventDefault()
+        talker.speak(`${reply}` + `${document.getElementById(identifier).value}`)
+        console.log("BEFORE", `this.story.${identifier}`, eval(`this.story.${identifier}`));
+        
+        eval("this.story."+identifier+" = "+JSON.stringify(`${document.getElementById(identifier).value}`)) //some metaprogramming right here....
+        console.log("AFTER", eval(`this.story.${identifier}`)) 
+      
+        newThing.style.display = "none";
+        newForm.style.display = "none";
+        newInput.style.display = "none"
+        newInputSubmit.style.display = "none"
+        newForm.removeEventListener('submit', submitHandler)
+        resolve()
+      }
+      newForm.addEventListener('submit', submitHandler)
     })
+
+      // this.waitForThis = async function () {
+      //   return new Promise(resolve => {
+      //     const doThisFirst = function() { 
+      //       const x = document.getElementById("stakesSubmit") 
+      //       x.removeEventListener('submit', doThisFirst)
+      //       resolve()
+      //       }
+      //       const x = document.getElementById("stakesSubmit") 
+      //       x.addEventListener('submit', doThisFirst)
+      //   })}
+
+
+    }
 
 
     
   }
 
 
-}
+
