@@ -1,8 +1,9 @@
 export class Story {
   constructor() {
-  this.firstName = ""
-  this.projectName = ""
-  this.thePremise = ""
+  this.firstName = "";
+  this.projectName = "";
+  this.thePremise = "";
+  this.riskUnity = "";
 
   this.act1;
   this.act2;
