@@ -26,29 +26,30 @@ class runTimeThing {
     this.switchboard.makeInput("What's the main premise of this story?", "thePremise", "Your premise is: ")
   }
 
-  
+  questions = [() => { this.question1()}, () => { this.question2()}, () => { this.question3()} ]
 
   questionLoop () {
-    this.questions = [() => { this.question1()},  () => { this.question2()}, () => { this.question3()}]
+    // this.questions = [() => { this.question1()},  () => { this.question2()}, () => { this.question3()}]
     let switchGate = "thou shall pass"
     
     for (let element of this.questions) {
-      
       if (switchGate == "thou shall pass") {
         element()
+        this.questions.shift()
         switchGate = "thou shalt not pass"
         if (switchGate == "thou shalt not pass" ) {
             this.clickyWicky = document.getElementById("stakesSubmit")
               this.clickyWicky.addEventListener('click', (event) => {
-              switchGate = "thou shall pass"
-              console.log(switchGate)
-              this.talker.wait(5000)
-              //why does it exit the entire loop here?
+                switchGate = "thou shall pass"
+                console.log(switchGate)
+                this.talker.wait(2000)
+                
+                this.questionLoop()
               })
-            }
-          }
-        }
-    }
+        }  
+      } 
+     }
+  } 
       // } else if (switchGate === "thou shalt not pass" ) {
       //   this.clickyWicky = document.getElementById("stakesSubmit")
       //   this.clickyWicky.addEventListener('click', (event) => {
