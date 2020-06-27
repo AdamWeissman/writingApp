@@ -14,34 +14,21 @@ class runTimeThing {
     this.switchboard = swb
   }
 
-  question1 () { 
-    return this.switchboard.makeInput("Hi, What's your name?", "firstName", "Nice to meet you ")
+  questioner (question, tracker, reply) {
+    return this.switchboard.makeInput(question, tracker, reply)
   }
-
-  question2 () {
-    return this.switchboard.makeInput("What do you want to call this project?", "projectName", "Your project is: ")
-  }
-
-  question3 () {
-    return this.switchboard.makeInput("What's the main premise of this story?", "thePremise", "Your premise is: ")
-  }
-
-  question4 () {
-    return this.switchboard.makeInput("What is the first risk associated with this premise?", "riskUnity", "Your first risk is: ")
-  }
-
-  questions = [
-    () => this.question1(),
-    () => this.question2(),
-    () => this.question3(),
-    () => this.question4()]
   
+  questions = [
+    () => this.questioner("Hi, What's your name?", "firstName", "Nice to meet you "),
+    () => this.questioner("What do you want to call this project?", "projectName", "Your project is: "),
+    () => this.questioner("What's the main premise of this story?", "thePremise", "Your premise is: "),
+    () => this.questioner("What is the first risk associated with this premise?", "riskUnity", "Your first risk is: "),
+  ]
+
  
   async questionLoop() {
     for (const question of this.questions) {
       await question()
-      
-      // this.waitForThis()
       continue
     }
   }
@@ -52,14 +39,16 @@ class runTimeThing {
       this.switchboard.compressedLookOff()
       // debugger;
       this.questionLoop()
+      return console.log("naiice")
       //this.switchboard.makeInput("Hi, What's your name?", "firstName")
     }, { once: true});
   }
   
   mainLoop () {
     this.switchboard.compressedLook()
-    this.turnItOn()
-  }
+    this.turnItOn().then(() =>
+    console.log("when will this show up?")
+    )}
 }  
 
 const rTT = new runTimeThing(talker, story, switchboard)

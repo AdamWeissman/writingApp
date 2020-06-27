@@ -2,8 +2,7 @@ export class SwitchBoard {
   constructor (speech, story) {
     this.talker = speech 
     this.story = story
-    // this.firstName = ""
-    // this.projectName = ""
+
     this.main = document.querySelector('main')
     this.body = document.querySelector('body')
     this.theSetup = document.getElementById('theSetup')
@@ -53,16 +52,6 @@ export class SwitchBoard {
     this.rowEcolumn3 = document.getElementById('unityE1o2c_col3')
     this.rowEcolumn4 = document.getElementById('unityE2o2c_col4d')
     this.rowEcolumn5 = document.getElementById('unityE1o1d_col5e')
-
-
-    // this.setStakes= document.getElementById('setStakes')
-    // this.stakesSubmit = document.getElementById('stakesSubmit')
-    // this.stakes1 = document.getElementById('stakes1')
-    // this.stakes2 = document.getElementById('stakes2')
-    // this.stakes3 = document.getElementById('stakes3')
-    // this.stakes4 = document.getElementById('stakes4')
-    // this.stakes5 = document.getElementById('stakes5')
-
   }
   
   compressedLook () {
