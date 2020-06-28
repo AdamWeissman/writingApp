@@ -22,13 +22,13 @@ class runTimeThing {
     () => this.questioner("Hi, What's your name?", "firstName", "Nice to meet you "),
     () => this.questioner("What do you want to call this story?", "projectName", "Your project is: "),
     () => this.questioner("What's the main premise of this story?", "thePremise", "Your premise is: "),
-    () => this.questioner("What's at stake in this story? In other words, what's the big risk?", "row1risks", "The primary danger in your story will come from: "),
+    () => this.questioner("What's the theme of your story?", "row1theme", "Your story's theme will be: "),
     
-    () => this.questioner("What are the stakes that set your story into motion?", "row1col1", "The stakes for act I will be: "),
-    () => this.questioner("What stakes are higher than the previous ones?", "row1col2", "Your second level of stakes will be: "),
-    () => this.questioner("What stakes make things even riskier than the previous ones?", "row1col3", "Your middle level stakes are: "),
-    () => this.questioner("What escalation of risks or stakes would make your story more calamitious?  Especially in the context of "+`${this.story.thePremise}`, "row1col4", "... REMEMBER, the stakes of your story are, for the beginning: "+`${this.story.row1col1}`+". The first escalation is: "+`${this.story.row1col2}`+". The middle of your story is"+`${this.story.row1col3}`+"and right before the climax: "),
-    () => this.questioner("What would be the final risks or stakes that best illustrate your premise and illustrate: "+`${this.story.row1risks}`+"?", "row1col5", "The context for the climax of your story is: " )
+    () => this.questioner("Come up with an event that dramatizes your theme: ", "row1col1", "Your first event is: "),
+    () => this.questioner("Provide another event that's more dramatic than the previous: ", "row1col2", "Your second event is: "),
+    () => this.questioner("Think of another event that builds on the implicit cumulative risks: ", "row1col3", "The midpoint event is: "),
+    () => this.questioner("Come up with an event that feels like a thematic capstone to all the previous events: ", "row1col4", "... Your events so far are: "+`${this.story.row1col1}`+". The second is: "+`${this.story.row1col2}`+". The middle of your story is "+`${this.story.row1col3}`+" and right before the climax: "),
+    () => this.questioner("Think of a climactic event that would end in catharsis, epiphany, and resolution... or calamity, frustraion, and disaster.  A final event, that summarizes all previous struggles.", "row1col5", "The contextual event for the climax of your story is: " )
   
   ]
 
@@ -66,7 +66,8 @@ class runTimeThing {
     theButton.addEventListener('click', () => {
       theButton.value = theValue
       console.log("this is: ", theButton.value())
-      theButton.innerHTML = theButton.value()
+      theButton.innerHTML = " "//theButton.value()
+      alert(theButton.value())
     })
 
     //theButton.innerHTML = await this.onlyIfText(theButton, theValue)
@@ -82,7 +83,7 @@ class runTimeThing {
 
 
   makeThese = [
-  () => this.buttonAdder(switchboard.rowAlabel, () => story.row1risks),
+  () => this.buttonAdder(switchboard.rowAlabel, () => story.row1theme),
   () => this.buttonAdder(switchboard.rowAcolumn1, () => story.row1col1),
   () => this.buttonAdder(switchboard.rowAcolumn2, () => story.row1col2),
   () => this.buttonAdder(switchboard.rowAcolumn3, () => story.row1col3),

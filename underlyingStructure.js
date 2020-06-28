@@ -19,7 +19,7 @@ export class Story {
   this.row5Label = "";
 
 
-  this.row1risks = "";
+  this.row1theme = "";
     this.row1col1 = "";
     this.row1col2 = "";
     this.row1col3 = "";

@@ -55,18 +55,18 @@ export class SwitchBoard {
   }
   
   compressedLook () {
-    this.theSlice.style.display = "none"
-    this.act1.style.display = "none"
-    this.act2.style.display = "none"
-    this.act3.style.display = "none"
-    this.act4.style.display = "none"
-    this.act5.style.display = "none"
+    this.theSlice.style.display = ""
+    this.act1.style.display = ""
+    this.act2.style.display = ""
+    this.act3.style.display = ""
+    this.act4.style.display = ""
+    this.act5.style.display = ""
 
-    this.rowAlabel.style.display = "none"
-    this.rowBlabel.style.display = "none"
-    this.rowClabel.style.display = "none"
-    this.rowDlabel.style.display = "none"
-    this.rowElabel.style.display = "none"
+    this.rowAlabel.style.display = ""
+    this.rowBlabel.style.display = ""
+    this.rowClabel.style.display = ""
+    this.rowDlabel.style.display = ""
+    this.rowElabel.style.display = ""
 
   }
 
