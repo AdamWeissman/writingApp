@@ -22,17 +22,16 @@ class runTimeThing {
     () => this.questioner("Hi, What's your name?", "firstName", "Nice to meet you "),
     () => this.questioner("What do you want to call this story?", "projectName", "Your project is: "),
     () => this.questioner("What's the main premise of this story?", "thePremise", "Your premise is: "),
-    () => this.questioner("What realm of risks or stakes are most interesting?  For example: physical, personal, social, existential, or spiritual risks?", "row1risks", "The primary danger in your story will come from: "),
+    () => this.questioner("What's at stake in this story? In other words, what's the big risk?", "row1risks", "The primary danger in your story will come from: "),
     
-    () => this.questioner("What are the stakes that set your story into motion?", "row1col", "The stakes for act I will be: "),
+    () => this.questioner("What are the stakes that set your story into motion?", "row1col1", "The stakes for act I will be: "),
     () => this.questioner("What stakes are higher than the previous ones?", "row1col2", "Your second level of stakes will be: "),
-    () => this.questioner("What would be even worse than "+`${this.story.row1col2}`, "row1col3", "Your middle level stakes are: "),
-    () => this.questioner("What escalation of risks or stakes would make your story more poignant?  Especially in the context of "+`${this.story.thePremise}`, "row1col4", "... The stakes of your story are, for the beginning: "+`${this.story.row1col1}`+". The first escalation is: "+`${this.story.row1col2}`+". The middle of your story is"+`${this.story.row1col3}`+"and right before the climax: "),
-    () => this.questioner("What would be the final risks or stakes that best illustrate your premise and sum up"+`${this.story.row1risks}`+"?", "row1col5", "The context for the climax of your story is: " )
+    () => this.questioner("What stakes make things even riskier than the previous ones?", "row1col3", "Your middle level stakes are: "),
+    () => this.questioner("What escalation of risks or stakes would make your story more calamitious?  Especially in the context of "+`${this.story.thePremise}`, "row1col4", "... REMEMBER, the stakes of your story are, for the beginning: "+`${this.story.row1col1}`+". The first escalation is: "+`${this.story.row1col2}`+". The middle of your story is"+`${this.story.row1col3}`+"and right before the climax: "),
+    () => this.questioner("What would be the final risks or stakes that best illustrate your premise and illustrate: "+`${this.story.row1risks}`+"?", "row1col5", "The context for the climax of your story is: " )
   
   ]
 
- 
   async questionLoop() {
     const story = this.story
     for (const question of this.questions) {
@@ -52,22 +51,49 @@ class runTimeThing {
     }, { once: true});
   }
   
-  addEventListenersHere (arrayOfThingsThatNeedButtons) {
+  
+  addEventListenersLoop (arrayOfThingsThatNeedButtons) {
     for (const thing of arrayOfThingsThatNeedButtons) {
-      console.log("this is :", thing.id)
-      thing.addEventListener('click', () => {
-      this.talker.speak("nothing to see here")
-      })
+        thing()
+
+      // thing.addEventListener('click', () => {
+      // this.talker.speak("nothing to see here")
+      // })
     }
   }
 
-  makeThese = [switchboard.rowAlabel, switchboard.rowAcolumn1, switchboard.rowAcolumn2, switchboard.rowAcolumn3, switchboard.rowAcolumn4, switchboard.rowAcolumn5]
+  async buttonAdder(theButton, theValue) {
+    theButton.addEventListener('click', () => {
+      theButton.value = theValue
+      console.log("this is: ", theButton.value())
+      theButton.innerHTML = theButton.value()
+    })
 
+    //theButton.innerHTML = await this.onlyIfText(theButton, theValue)
+  }
+
+  // async onlyIfText (theButton, theValue) {
+  //   return new Promise(resolve => {
+  //     "house"
+  //     resolve()
+  //     }
+  //   )
+  // }
+
+
+  makeThese = [
+  () => this.buttonAdder(switchboard.rowAlabel, () => story.row1risks),
+  () => this.buttonAdder(switchboard.rowAcolumn1, () => story.row1col1),
+  () => this.buttonAdder(switchboard.rowAcolumn2, () => story.row1col2),
+  () => this.buttonAdder(switchboard.rowAcolumn3, () => story.row1col3),
+  () => this.buttonAdder(switchboard.rowAcolumn4, () => story.row1col4),
+  () => this.buttonAdder(switchboard.rowAcolumn5, () => story.row1col5)
+  ]
 
   mainLoop () {
     this.switchboard.compressedLook()
     this.turnItOn()
-    this.addEventListenersHere(this.makeThese)
+    this.addEventListenersLoop(this.makeThese)
     }
 }  
 
