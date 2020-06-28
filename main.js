@@ -56,7 +56,7 @@ class runTimeThing {
     for (const thing of arrayOfThingsThatNeedButtons) {
       console.log("this is :", thing.id)
       thing.addEventListener('click', () => {
-      alert(thing.innerHTML)
+      this.talker.speak("nothing to see here")
       })
     }
   }
